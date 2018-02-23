@@ -1,0 +1,41 @@
+Host: www.douban.com
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:58.0) Gecko/20100101 Firefox/58.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+Accept-Encoding: gzip, deflate, br
+Referer: https://www.douban.com/group/topic/112873079/?start=0
+Content-Type: multipart/form-data; boundary=---------------------------2114238251166754084251546984
+Content-Length: 693
+Cookie: bid=OMFhlzP4OBY; _pk_ref.100001.8cb4=%5B%22%22%2C%22%22%2C1519315465%2C%22https%3A%2F%2Fwww.baidu.com%2Flink%3Furl%3DZMuhKZ0HdOHxaJRgD7DcCh7CSwVBQAkwz0kvKMlVwlg87l0txqsP1lqnP9w1bgwp%26wd%3D%26eqid%3Dc319fedf0000f47c000000035a8e7984%22%5D; _pk_id.100001.8cb4=4ed3eac8e81d861e.1515597105.4.1519301758.1518053687.; __yadk_uid=5DGXLZvHJOKS4GLJc8NAK6hzoPzc2i6R; __utma=30149280.151511579.1515597107.1518053754.1519301239.4; __utmz=30149280.1519301239.4.3.utmcsr=baidu|utmccn=(organic)|utmcmd=organic; ll="108296"; ap=1; push_noty_num=0; push_doumail_num=0; ps=y; __utmv=30149280.15729; _pk_ses.100001.8cb4=*; ct=y; regpop=1; __utmb=30149280.46.6.1519301760545; __utmc=30149280; __utmt=1; dbcl2="157290675:Hb5C4zKq4LQ"; ck=Qmw_
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+-----------------------------2114238251166754084251546984
+Content-Disposition: form-data; name="ck"
+
+Qmw_
+-----------------------------2114238251166754084251546984
+Content-Disposition: form-data; name="rv_comment"
+
+小房子出租啦
+-----------------------------2114238251166754084251546984
+Content-Disposition: form-data; name="img"; filename=""
+Content-Type: application/octet-stream
+
+
+-----------------------------2114238251166754084251546984
+Content-Disposition: form-data; name="start"
+
+0
+-----------------------------2114238251166754084251546984
+Content-Disposition: form-data; name="submit_btn"
+
+发送
+-----------------------------2114238251166754084251546984--
+
+
+
+
+https://www.douban.com/group/topic/112873079/add_comment
+
+
+
