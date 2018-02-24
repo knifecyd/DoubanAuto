@@ -18,31 +18,45 @@ def get_cookies():
     with open(filepath.cookie_txt, "r") as f_cookie:
         douban_cookies = f_cookie.readlines()[0].split("; ")
         for line in douban_cookies:
-	    line = line.strip('\n')
-	    key, value = line.split("=", 1)
+            line = line.strip('\n')
+            key, value = line.split("=", 1)
             cookies[key] = value
-	return cookies
+        return cookies
+
 
 def get_header():
-	header = {}
-	with open(filepath.header_txt,"r") as f_header:
-	    douban_headers = f_header.readlines() 
-	for line in douban_headers:
-		line = line.strip('\n')
-		k,v = line.split(":",1)
-		header[k] = v.strip()
-        return  header
+    header = {}
+    with open(filepath.header_txt, "r") as f_header:
+        douban_headers = f_header.readlines()
+    for line in douban_headers:
+        line = line.strip('\n')
+        k, v = line.split(":", 1)
+        header[k] = v.strip()
+    return header
 
+
+def get_topics():
+    topics = {}
+    with open(filepath.topics_txt, "r") as  f_topics:
+        topics = f_topics.readlines()
+        index = 0
+        for line in topics:
+            line = line.strip('\n')
+            topics[index] = line
+            index = index + 1
+
+    return topics
 
 
 def get_cookies_as_strings():
-	cookies =""
-	with open(filepath.cookie_txt,"r") as  f_cookie:
-	 for line  in  f_cookie:
-		print  line
-		cookies=cookies+line
-        print  " cookies --- " + cookies
-	return cookies
+    cookies = ""
+    with open(filepath.cookie_txt, "r") as  f_cookie:
+        for line in f_cookie:
+            print  line
+            cookies = cookies + line
+    print  " cookies --- " + cookies
+    return cookies
+
 
 def get_active_group_set():
     # 获取所有非常活跃小组的id，存入set中
@@ -135,6 +149,11 @@ def get_verify_code_pic(url):
 
 def get_image_and_id(text):
     # 通过html提取验证码图片URL和id
+
+    # <img id="captcha_image" src="https://www.douban.com/misc/captcha?id=AVKgxsvwapjqRM3v0jcFckqj:en&amp;size=s"
+    # alt="captcha" class="captcha_image"/> <div class="captcha_block"> <span id="captcha_block"
+    # class="pl">请输入上图中的单词</span> <input type="text" id="captcha_field" name="captcha-solution" tabindex=3
+    # placeholder="验证码" /> <input type="hidden" name="captcha-id" value="AVKgxsvwapjqRM3v0jcFckqj:en"/> </div>
 
     html = etree.HTML(text)
     pic_url = html.xpath("//img[@class='captcha_image']/@src")

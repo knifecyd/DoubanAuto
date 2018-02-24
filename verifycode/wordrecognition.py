@@ -13,8 +13,8 @@ sys.setdefaultencoding("utf-8")
 
 
 def get_word_in_pic(pic_path):
-    # 给定图片地址 pic_path，识别图片当中的文字
 
+    # 给定图片地址 pic_path，识别图片当中的文字
     result = accesstoken.get_access_token()
     access_token = result["access_token"]
     url = 'https://aip.baidubce.com/rest/2.0/ocr/v1/webimage?access_token=' + access_token

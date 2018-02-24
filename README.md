@@ -44,5 +44,3 @@ Automatic Robot for Douban
 ## 版本历史
 - [V1.0](version/V1.0.md)
 
-## 交流建议
-- 欢迎批评指正，提出意见（使用过程中遇到任何问题，都可邮件联系）：liu_yuning@foxmail.com 
