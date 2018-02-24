@@ -54,7 +54,7 @@ def get_cookies_as_strings():
         for line in f_cookie:
             print  line
             cookies = cookies + line
-    print  " cookies --- " + cookies
+    print " cookies --- " + cookies
     return cookies
 
 
@@ -135,6 +135,8 @@ def cache_group_name_id():
 
 
 def get_verify_code_pic(url):
+    # type: (object) -> object
+    # type: (object) -> object
     # 获取验证码的图片URL和id
 
     r = requests.get(url, cookies=get_cookies())

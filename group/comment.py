@@ -28,6 +28,7 @@ def comment_post(url, _header, _data):
 
 
 def make_comment_dicts(topic_url, rv_comment):
+    # type: (object, object) -> object
     # 组装回帖的参数
 
     pic_url, pic_id = doubanutil.get_verify_code_pic(topic_url)
@@ -47,8 +48,6 @@ def make_comment_dicts(topic_url, rv_comment):
 
 
 def make_comment_dict(topic_url, rv_comment):
-
-    topurl_tmp = topic_url
 
     comment_dict = {
         "ck": doubanutil.get_form_ck_from_cookie(),

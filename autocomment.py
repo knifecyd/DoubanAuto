@@ -1,14 +1,16 @@
 # -*- coding: utf-8 -*-
 import random
 import time
-import requests
-from lxml import etree
+import sys
 
 from group import comment
 from config import doubanurl
+
 from util import doubanutil
 
 if __name__ == "__main__":
+
+    print "syspath " + str(sys.path)
     group_id = ""
     group_url = doubanurl.DOUBAN_GROUP + group_id
     #  r = requests.get(group_url, cookies=doubanutil.get_cookies())
@@ -24,7 +26,7 @@ if __name__ == "__main__":
         assert isinstance(k, object)
         print "topics : " + k
 
-    count = 5
+    count = 20
 
 while count > 0:
     # test_header = doubanutil.get_header()
@@ -35,13 +37,14 @@ while count > 0:
         print "the processing topics url is :[%s]" % tp
         comment_topic_url = topic_url + "/add_comment#last"
         comment_str = "up" + "%d" % random.randint(100, 500)
-        comment_dict = comment.make_comment_dict(topic_url, comment_str)
+        #comment_dict = comment.make_comment_dict(topic_url, comment_str)
+        comment_dict = comment.make_comment_dicts(topic_url, comment_str)
         for i in comment_dict:
             print "comment_dict[%s]=" % i, comment_dict[i]
         comment.comment_topic(comment_topic_url, comment_dict)
         # comment.comment_post(comment_topic_url, test_header, comment_dict)
 
-        random_sleep = random.randint(10, 50)
+        random_sleep = random.randint(100, 500)
         time.sleep(random_sleep)
         count = count - 1
 
