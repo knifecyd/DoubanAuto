@@ -5,11 +5,12 @@ import sys
 
 from group import comment
 from config import doubanurl
-
 from util import doubanutil
+import os
 
 if __name__ == "__main__":
 
+    print os.getcwd()
     print "syspath " + str(sys.path)
     group_id = ""
     group_url = doubanurl.DOUBAN_GROUP + group_id
